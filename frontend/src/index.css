@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  /* Editorial / Hand-drawn palette */
+  --paper: #fefcf8;
+  --foreground: #1c1917; /* near black */
+  --muted-foreground: #57534e;
+  --border: #d6d3d1;
+  --primary: #ea580c; /* Orange marker */
+  --secondary: #3b82f6; /* Blue marker */
+  --accent: #fef08a; /* Yellow highlight */
+  --accent-foreground: #1c1917;
+  --destructive: #ef4444;
+  --card: #ffffff;
+  --radius: 0.5rem; /* Less perfectly rounded */
+
+  --font-sans: "Inter", sans-serif;
+  --font-handwritten: "Caveat", cursive;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-card: var(--card);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+@utility font-handwritten {
+  font-family: var(--font-handwritten);
+}
+
+body {
+  background-color: var(--paper);
+  background-image: radial-gradient(#d6d3d1 1px, transparent 0);
+  background-size: 32px 32px;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  margin: 0;
+}
+
+.box-sketch {
+  background-color: var(--card);
+  border: 2px solid var(--foreground);
+  border-radius: 8px 24px 12px 24px / 24px 8px 24px 16px;
+  box-shadow: 4px 6px 0px -1px rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease;
+}
+
+.box-sketch:hover {
+  box-shadow: 6px 8px 0px -1px rgba(0, 0, 0, 0.8);
+  transform: translateY(-2px);
+}
+
+.box-sketch-no-hover {
+  background-color: var(--card);
+  border: 2px solid var(--foreground);
+  border-radius: 2px 255px 3px 225px / 255px 5px 225px 3px;
+  box-shadow: 3px 4px 0px -1px rgba(0, 0, 0, 0.8);
+}
+
+/* Notebook lines for AI feedback area */
+.notebook-lines {
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 31px,
+    var(--border) 31px,
+    var(--border) 32px
+  );
+  background-attachment: local;
+}
+
+.rough-highlight {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.rough-highlight::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -2%;
+  width: 104%;
+  height: 110%;
+  background-color: var(--accent);
+  z-index: -1;
+  transform: translateY(-50%) rotate(-1deg);
+  border-radius: 3px 8px 4px 6px / 6px 3px 8px 4px;
+}
+
+.marker-orange::after {
+  background-color: rgba(234, 88, 12, 0.2);
+}
+.marker-blue::after {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-left: 1px solid var(--border);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--foreground);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}

@@ -1,0 +1,53 @@
+﻿python : C:\Users\bhara
+\OneDrive\Desktop\CODE 
+TUTOR\backend\test_mode
+ls.py:1: 
+FutureWarning: 
+At line:1 char:26
++ ... ripts\activate; 
+python test_models.py 
+> test_results.txt 
+2>&1; cat te ...
++                     ~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (C:\Users\bhar   
+ a\...FutureWarning    
+: :String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+
+All support for the 
+`google.generativeai` 
+package has ended. It 
+will no longer be 
+receiving 
+updates or bug fixes. 
+Please switch to the 
+`google.genai` package 
+as soon as possible.
+See README for more 
+details:
+
+https://github.com/goog
+le-gemini/deprecated-ge
+nerative-ai-python/blob
+/main/README.md
+
+  import 
+google.generativeai as 
+genai
+API Key found: True
+Testing gemini-1.5-flash...
+  FAIL: gemini-1.5-flash -> 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available
+Testing gemini-1.5-pro...
+  FAIL: gemini-1.5-pro -> 404 models/gemini-1.5-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available m
+Testing gemini-2.0-flash...
+  FAIL: gemini-2.0-flash -> 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/ge
+Testing gemini-2.5-flash...
+  SUCCESS: gemini-2.5-flash -> Hello
