@@ -56,3 +56,17 @@ lerna-debug.log*
 *.sw?
 thumbs.db
 db.sqlite3-journal
+
+# Documentation & personal notes (local only)
+Bharathinfo.txt
+LINKEDIN_CAROUSEL.txt
+PROJECT_DETAILS.txt
+PROJECT_DEVELOPMENT_LOG.txt
+RESUME_CONTENT.txt
+TECHNICAL_DOCUMENTATION.txt
+api.txt
+frontend.txt
+generate_linkedin_pdf.py
+linkedin_carousel.html
+ppt.txt
+
