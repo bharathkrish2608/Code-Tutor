@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import CodeEditor from "./components/CodeEditor";
 import FeedbackDisplay from "./components/FeedbackDisplay";
@@ -9,6 +9,13 @@ function App() {
   const [result, setResult] = useState("");
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [apiError, setApiError] = useState("");
+
+  useEffect(() => {
+    // Silent warm-up ping to wake up Render server immediately when user lands on page
+    const API_URL = import.meta.env.VITE_API_URL || 'https://code-tutor-m4di.onrender.com/api';
+    fetch(`${API_URL}/analyze/`, { method: 'OPTIONS' }).catch(() => {});
+  }, []);
+
 
   const handleAnalyze = async () => {
     if (!code.trim()) {
