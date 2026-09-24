@@ -1,0 +1,21 @@
+LinkedIn Post Caption:
+
+For my internship project, I built AI Coding Tutor—a full-stack web application designed to help beginner programmers actually understand their code errors instead of getting stuck or blind copy-pasting. When you paste broken Python code into the app, it runs an AI analysis through Google's Gemini API and returns structured feedback: an analysis of your code, what went wrong, a plain-English explanation, corrected code, the core programming concept, and two custom practice exercises to test your understanding. I built the client with React 19, Vite, and Tailwind CSS, and connected it to a Django REST Framework backend. The complete project is live and documented on GitHub at github.com/bharathkrish2608/ai-coding-tutor—check it out and let me know your thoughts!
+
+
+LinkedIn Slide Deck Content:
+
+Slide 1:
+AI Coding Tutor — Internship Project Overview
+
+Slide 2:
+What I Built: A full-stack web app that takes broken Python code and turns it into structured, beginner-friendly learning modules.
+
+Slide 3:
+Problem Solved: Solved the friction beginners face with cryptic terminal error logs and blind copy-pasting by providing clear explanations, fixed code, core concepts, and practice tasks.
+
+Slide 4:
+Results & Tech Stack: Built a responsive React + Vite UI with syntax highlighting, backed by a Django REST API and Google Gemini API for structured AI analysis.
+
+Slide 5:
+Shipped & Open Source: The full repository and documentation are live on GitHub at github.com/bharathkrish2608/ai-coding-tutor.
